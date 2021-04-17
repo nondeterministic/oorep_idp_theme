@@ -39,6 +39,12 @@ $errorparams          = $this->data['errorparams'];
     -->
 
     <div class="col-md-6 panel-body text-center">
+    <div class="card">
+      <h5 class="card-header">
+      Login
+      </h5>
+
+      <div class="card-body">
       <p class="logintext">
          You have requested the OOREP identity provider. Please enter your username and password in the form below. 
 	<!-- ?php echo $this->t('{login:user_pass_text}'); ? -->
@@ -74,6 +80,7 @@ $errorparams          = $this->data['errorparams'];
         <?php endforeach; ?>
 
       </form>
+      </div>
     </div>
   </div>
 </div>

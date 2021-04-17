@@ -53,8 +53,10 @@ if (array_key_exists('header', $this->data)) {
 ?></title>
 
     <link rel="stylesheet" type="text/css" href="/<?php echo $this->data['baseurlpath']; ?>resources/oorep/default.css" />
+    <link rel="icon" type="image/icon" href="https://www.oorep.com/favicon.ico" />
+    <!--
     <link rel="icon" type="image/icon" href="/<?php echo $this->data['baseurlpath']; ?>resources/icons/favicon.ico" />
-
+    -->
 <?php
 
 if (!empty($jquery)) {
@@ -120,7 +122,7 @@ if (array_key_exists('autofocus', $this->data)) {
 
 <div class="container" id="wrap">
 
-    <div class="text-center" style="padding-top:70px; padding-bottom:30px;" id="header">
+    <div class="text-center" style="padding-top:200px; padding-bottom:30px;" id="header">
 	<h1><a href="https://www.oorep.com/">
 		<img src="https://www.oorep.com/assets/html/img/logo_small.png" alt="OOREP">
         </a></h1>
