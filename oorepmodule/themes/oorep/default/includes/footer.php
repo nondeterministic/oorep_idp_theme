@@ -12,9 +12,9 @@ if (!empty($this->data['htmlinject']['htmlContentPost'])) {
 		<hr />
                 <img src="/<?php echo $this->data['baseurlpath']; ?>resources/icons/ssplogo-fish-small.png" alt="Small fish logo" style="float: right" />		
 		-->    
-		<a href="<?php echo $_SERVER[HTTP_REFERER]; ?>">Back to main page</a>
+		<a href="https://www.oorep.com/">Back to main page</a>
                 &nbsp; | &nbsp;
-		<a href="<?php echo $_SERVER[HTTP_REFERER]; ?>forgot_password">Help, I forgot my password!</a>
+		<a href="https://www.oorep.com/forgot_password">Help, I forgot my password!</a>
                 <br style="clear: right" />
             </div>
             </div><!-- #footer -->
