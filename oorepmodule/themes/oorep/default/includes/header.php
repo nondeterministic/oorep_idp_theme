@@ -53,7 +53,7 @@ if (array_key_exists('header', $this->data)) {
 ?></title>
 
     <link rel="stylesheet" type="text/css" href="/<?php echo $this->data['baseurlpath']; ?>resources/oorep/default.css" />
-    <link rel="icon" type="image/icon" href="https://www.oorep.com/favicon.ico" />
+    <link rel="icon" type="image/icon" href="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/img/favicon.ico')); ?>" />
     <!--
     <link rel="icon" type="image/icon" href="/<?php echo $this->data['baseurlpath']; ?>resources/icons/favicon.ico" />
     -->
@@ -105,11 +105,11 @@ if (array_key_exists('head', $this->data)) {
 }
 ?>
 
-  <link rel="stylesheet" href="https://www.oorep.com/assets/html/third-party/bootstrap-4.1.3/css/bootstrap.min.css">
-  <script src="https://www.oorep.com/assets/html/third-party/jquery-3.3.1.min.js"></script>
-  <script src="https://www.oorep.com/assets/html/third-party/popper.min.js"></script>
-  <script src="https://www.oorep.com/assets/html/third-party/bootstrap-4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/third-party/bootstrap-4.1.3/css/bootstrap.min.css')); ?>" />
 
+  <script src="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/third-party/jquery-3.3.1.min.js')); ?>"></script>
+  <script src="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/third-party/popper.min.js')); ?>"></script>
+  <script src="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/third-party/bootstrap.min.js')); ?>"></script>
 
 </head>
 <?php
@@ -124,7 +124,7 @@ if (array_key_exists('autofocus', $this->data)) {
 
     <div class="text-center" style="padding-top:200px; padding-bottom:30px;" id="header">
 	<h1><a href="https://www.oorep.com/">
-		<img src="https://www.oorep.com/assets/html/img/logo_small.png" alt="OOREP">
+		<img src="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/img/logo_small.png')); ?>" alt="OOREP">
         </a></h1>
     </div>
 
