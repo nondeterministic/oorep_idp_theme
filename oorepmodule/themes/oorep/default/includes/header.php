@@ -52,10 +52,6 @@ if (array_key_exists('header', $this->data)) {
 }
 ?></title>
 
-    <!--
-    <link rel="stylesheet" type="text/css" href="/<?php echo $this->data['baseurlpath']; ?>resources/oorep/default.css" />
-    -->
-
     <link rel="icon" type="image/icon" href="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/img/favicon.ico')); ?>" />
 
     <!--
@@ -114,6 +110,8 @@ if (array_key_exists('head', $this->data)) {
   <script src="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/third-party/jquery-3.3.1.min.js')); ?>"></script>
   <script src="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/third-party/popper.min.js')); ?>"></script>
   <script src="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/third-party/bootstrap-4.1.3/js/bootstrap.min.js')); ?>"></script>
+
+  <link rel="stylesheet" type="text/css" href="<?php echo htmlspecialchars(SimpleSAML\Module::getModuleURL('oorepmodule/default.css')); ?>" />
 
 </head>
 <?php
