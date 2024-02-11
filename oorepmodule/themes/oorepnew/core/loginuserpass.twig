@@ -1,0 +1,53 @@
+{% set pagetitle = 'Enter your username and password'|trans %}
+
+{% extends "@core/base.twig" %}
+
+{% block postload %}
+    <script src="{{ asset('js/loginuserpass.js', 'core') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row justify-content-center panel panel-default">
+    <div class="col-md-6 panel-body text-center">
+      <div class="card">
+
+        <h5 class="card-header">
+          Login
+        </h5>
+
+        <div class="card-body">
+
+          <p class="logintext">
+            You have requested the OOREP identity provider. Please enter your username and password 
+            in the form below.
+          </p>
+
+          <form id="f" class="pure-form pure-form-aligned" action="{{ moduleURL('core/loginuserpass', {'AuthState': AuthState}) }}" method="post" name="f" spellcheck="false">
+
+            <div class="form-group">
+              <input id="username" {{ forceUsername ? 'disabled' }} placeholder="Username" type="text" name="username" class="edge form-control" tabindex="1">
+            </div>
+
+            <div class="form-group">
+              <input id="password" type="password" tabindex="2" name="password" class="form-control edge" autocomplete="current-password" placeholder="Password">
+            </div>
+
+            <div class="pure-control-group center login-form-submit">
+              <button class="pure-button pure-button-red pure-input-1-2 pure-input-sm-1-1 right btn-lg btn-primary btn btn-block btn-default" id="submit_button"
+                      type="submit" tabindex="6" data-default="Submit"
+                      data-processing="{% trans %}Processing...{% endtrans %}">
+                Submit
+              </button>
+            </div>
+          </form>
+
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
