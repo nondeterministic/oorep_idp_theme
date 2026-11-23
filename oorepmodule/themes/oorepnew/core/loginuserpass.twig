@@ -48,10 +48,12 @@
             in the form below.
           </p>
 
-          <form id="f" class="pure-form pure-form-aligned" action="{{ moduleURL('core/loginuserpass', {'AuthState': AuthState}) }}" method="post" name="f" spellcheck="false">
+          <form id="f" class="pure-form pure-form-aligned" action="{{ formURL }}" method="post" name="f" spellcheck="false">
 
             <div class="form-group">
-              <input id="username" {{ forceUsername ? 'disabled' }} placeholder="Username" type="text" name="username" class="edge form-control" tabindex="1">
+              <input id="username" {{ forceUsername ? 'disabled autocomplete="off"' }} placeholder="Username" type="text" name="username" class="edge form-control"
+              {%- if not forceUsername %} tabindex="1" value="{{ username }}" autocomplete="username" {% endif %}
+              {%- if not forceUsername and not username %} autofocus {% endif %} >
             </div>
 
             <div class="form-group">
